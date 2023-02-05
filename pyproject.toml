@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ds-twitter-elt"
+version = "0.1.0"
+description = ""
+authors = ["HarrisonHenri <harrisonhenrisn@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ds_twitter_elt"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+apache-airflow = "2.3.2"
+pyspark = "^3.3.1"
+numpy = "^1.24.1"
+jupyter = "^1.0.0"
+apache-airflow-providers-apache-spark = "^4.0.0"
+python-dotenv = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
