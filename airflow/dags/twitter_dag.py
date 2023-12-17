@@ -42,8 +42,8 @@ with DAG(dag_id="TwitterDAG", start_date=days_ago(2), schedule_interval="@daily"
     twitter_insight = SparkSubmitOperator(task_id="insight_twitter",
                                           application=join(PROJECT_LOCATION, "spark/insight_tweet.py"),
                                           name="insight_twitter",
-                                          application_args=["--src", BASE_FOLDER.format(stage="Silver", partition=""),
-                                                            "--dest", BASE_FOLDER.format(stage="Gold", partition=""),
+                                          application_args=["--src", BASE_FOLDER.format(stage="silver", partition=""),
+                                                            "--dest", BASE_FOLDER.format(stage="gold", partition=""),
                                                             "--process-date", "{{ ds }}"])
 
 twitter_operator >> twitter_transform >> twitter_insight

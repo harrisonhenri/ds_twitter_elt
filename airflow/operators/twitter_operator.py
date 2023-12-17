@@ -19,7 +19,6 @@ class TwitterOperator(BaseOperator):
         super().__init__(**kwargs)
 
     def create_parent_folder(self):
-        self.log.info("aqui", self.file_path)
         (Path(self.file_path).parent).mkdir(parents=True, exist_ok=True)
 
     def execute(self, context):

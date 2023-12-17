@@ -1,0 +1,2 @@
+airflow connections add twitter_default --conn-type 'http' --conn-host 'https://labdados.com/' --conn-extra '{"Authorization": "Bearer AAAAAAAAAAAAAAAAAAAAAECSggEAAAAAr5hRITvLpVXhASZToJF00YXJYiY%3DfUFLCl2PJTQwkxEQlcAWRwQRNMJgPgBSrmvC4NmJC3FR7rAtDU"}'
+airflow connections add spark_default --conn-type 'spark' --conn-host 'local'
