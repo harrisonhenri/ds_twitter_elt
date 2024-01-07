@@ -11,7 +11,7 @@ from os.path import join
 from airflow.utils.dates import days_ago
 
 load_dotenv()
-PROJECT_LOCATION = os.getenv('PROJECT_LOCATION')
+PROJECT_LOCATION = os.getcwd()
 
 with DAG(dag_id="TwitterDAG", start_date=days_ago(2), schedule_interval="@daily") as dag:
     BASE_FOLDER = join(
