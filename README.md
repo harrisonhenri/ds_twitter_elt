@@ -41,6 +41,8 @@ Install all the required dependencies
 $ poetry install
 ```
 
+PS: This project a version of spark compatible with java 11. You also need to define your `AIRFLOW_HOME` and `SPARK_HOME`.
+
 ## Built with
 
 - [Airflow](https://airflow.apache.org/)
